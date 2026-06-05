@@ -216,3 +216,29 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# --- General ---
+.DS_Store
+.venv/
+__pycache__/
+*.log
+
+# --- Go ---
+collector-go/poweraudit-collector
+collector-go/vendor/
+
+# --- Data ---
+data/*.db
+data/*.wal
+
+# --- dbt ---
+dbt_poweraudit/target/
+dbt_poweraudit/dbt_packages/
+dbt_poweraudit/logs/
+
+# --- Python ---
+*.pyc
+.pytest_cache/
+.env
+
+# --- Dagster ---
+dagster_poweraudit/storage/

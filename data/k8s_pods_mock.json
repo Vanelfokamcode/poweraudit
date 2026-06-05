@@ -1,0 +1,14 @@
+{
+  "items": [
+    {"metadata": {"namespace": "billing",      "name": "api-7d9f"},      "spec": {"nodeName": "worker-node-1"}},
+    {"metadata": {"namespace": "billing",      "name": "worker-2"},      "spec": {"nodeName": "worker-node-1"}},
+    {"metadata": {"namespace": "billing",      "name": "db-replica"},    "spec": {"nodeName": "worker-node-3"}},
+    {"metadata": {"namespace": "ml-inference", "name": "gpu-0"},         "spec": {"nodeName": "worker-node-1"}},
+    {"metadata": {"namespace": "ml-inference", "name": "gpu-1"},         "spec": {"nodeName": "worker-node-2"}},
+    {"metadata": {"namespace": "api-gateway",  "name": "proxy"},         "spec": {"nodeName": "worker-node-2"}},
+    {"metadata": {"namespace": "api-gateway",  "name": "auth"},          "spec": {"nodeName": "worker-node-3"}},
+    {"metadata": {"namespace": "monitoring",   "name": "prometheus"},    "spec": {"nodeName": "worker-node-1"}},
+    {"metadata": {"namespace": "logging",      "name": "elasticsearch"}, "spec": {"nodeName": "worker-node-2"}},
+    {"metadata": {"namespace": "logging",      "name": "kibana"},        "spec": {"nodeName": "worker-node-3"}}
+  ]
+}
