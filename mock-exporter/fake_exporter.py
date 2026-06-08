@@ -11,14 +11,12 @@ cpu_usage = Gauge(
     ['namespace', 'pod', 'node'],
     registry=registry
 )
-
 mem_usage = Gauge(
     'container_memory_working_set_bytes',
     'Memory usage per container',
     ['namespace', 'pod', 'node'],
     registry=registry
 )
-
 cpu_requests = Gauge(
     'kube_pod_container_resource_requests',
     'CPU requests per container',
@@ -26,6 +24,7 @@ cpu_requests = Gauge(
     registry=registry
 )
 
+# Topology fixe — même que k8s_pods_mock.json
 PODS = [
     ("billing",       "api-7d9f",      "worker-node-1", 0.043, 0.200, 512),
     ("billing",       "worker-2",      "worker-node-1", 0.120, 0.500, 1024),
@@ -53,7 +52,7 @@ def update_metrics():
 
 if __name__ == "__main__":
     start_http_server(9100, registry=registry)
-    print("Fake Prometheus exporter running on :9100/metrics")
+    print("Fake exporter running on :9100/metrics — 10 pods / 5 namespaces / 3 nodes")
     while True:
         update_metrics()
         time.sleep(15)
